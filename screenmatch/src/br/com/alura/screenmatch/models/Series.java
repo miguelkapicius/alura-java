@@ -5,6 +5,12 @@ public class Series extends Title {
     boolean isActive;
     int minutesPerEpisode;
 
+
+    //CONSTRUCTOR
+    public Series(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
     // GETTERS
     public int getSeasons() {
         return this.seasons;
@@ -44,7 +50,11 @@ public class Series extends Title {
         this.minutesPerEpisode = minutesPerEpisode;
     }
 
+    //METHODS
 
-    
 
+    @Override
+    public String toString() {
+        return "Série: " + this.getName() + " (" + this.getReleaseYear() + ")";
+    }
 }
